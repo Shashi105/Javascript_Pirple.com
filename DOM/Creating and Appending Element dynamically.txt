@@ -1,0 +1,36 @@
+HTML:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+<div id="created">
+  </div>
+</body>
+</html>
+
+
+JavaScript:
+
+const iceCream=["Vanilla","Chocolate","Mango","Strawberry"];
+
+const creation=document.getElementById("created");
+
+const newUL=document.createElement("UL");
+
+for(let i=0;i<iceCream.length;i++){
+  
+const newLI=document.createElement("LI");
+  newLI.innerText=iceCream[i];
+  newUL.appendChild(newLI)
+}
+
+// console.log(newUL);
+
+creation.appendChild(newUL);
+
+// console.log(creation);

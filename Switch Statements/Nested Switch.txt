@@ -1,0 +1,28 @@
+function numChecker(num){
+  let value;
+  switch(num){
+    case 0:
+    case 1:
+    case 2:
+      console.log("low-range value");
+      break;
+    case 3:
+    case 4:
+    case 5:
+      console.log("mid-range value");
+      break;
+    case 6:
+    case 7:
+    case 8:
+    case 9:
+      console.log("high-range value");
+      break;
+    default: 
+      console.log("Please enter the value between 0-9");
+      break;       
+  }
+  console.log("the value of number is : "+num);
+}
+
+
+numChecker(20);

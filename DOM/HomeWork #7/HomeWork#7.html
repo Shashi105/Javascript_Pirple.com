@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework #7</title>
+    <style>
+        .rectangleDimensions{
+            height:100px;
+            width:100px;
+        }
+
+    </style>
+</head>
+<body>
+    <script>
+      
+backgroundColorArr=["#0000cc","#ff3300","#00ff00","#ffff00",
+                   "#808080","#bfff00","#ffff00","#ff0000",
+                    "#7300e6","#cc8800"]
+
+const newH1Tag=document.createElement("H1");
+const newH2Tag=document.createElement("H2");
+
+newH1Tag.innerText="Homework#7";
+newH2Tag.innerText="DOM Manipulation";
+
+document.body.appendChild(newH1Tag);
+document.body.appendChild(newH2Tag);
+const rectWrapperDiv=document.createElement("DIV");
+rectWrapperDiv.style.paddingLeft="50px";
+rectWrapperDiv.style.paddingTop="50px";
+rectWrapperDiv.style.paddingRight="50px";
+rectWrapperDiv.style.paddingBottom="0px";
+rectWrapperDiv.setAttribute("id", "rectangleWrapper");          
+document.body.appendChild(rectWrapperDiv);
+
+
+for(let i=0;i<10;i++){
+  const rectDiv=document.createElement("DIV");
+  const hexDiv=document.createElement("DIV");
+  rectDiv.setAttribute("id", "democlass"+[i]);
+  rectDiv.setAttribute("class", "rectangleDimensions");
+  rectDiv.style.backgroundColor=  backgroundColorArr[i];
+  hexDiv.innerText=backgroundColorArr[i];
+  document.getElementById("rectangleWrapper").appendChild(rectDiv);
+  document.getElementById("rectangleWrapper").appendChild(hexDiv);
+}
+
+console.log("Here are the rectangle IDs");
+for(let i=0;i<20;i=i+2){
+ console.log(document.getElementById("rectangleWrapper").childNodes[i].id);
+}
+
+const addTitle=document.createElement("TITLE");
+addTitle.innerText=document.getElementsByTagName("h1").innerText;
+document.head.appendChild(addTitle);
+
+</script>
+</body>
+</html>

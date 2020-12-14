@@ -1,0 +1,146 @@
+HTML:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <style>
+    .dummy{
+      color:red;
+    }
+    .dummy span{
+      color:blue;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    
+    I should not be clored green ;> !
+    
+  </div>
+  <div class="dummy">
+    
+    some <span> dummy</span> text
+    
+  </div>
+  
+   <div class="dummy">
+    
+    some more <span> dummy</span> text
+    
+  </div>
+  
+  
+  
+  
+</body>
+</html>
+
+
+JvaScript:
+
+const dummyDivs=document.querySelectorAll(".dummy span");
+
+// console.log(dummyDivs);
+
+
+// console.log(dummyDivs.style);
+
+
+
+// console.log(dummyDivs.length);
+
+
+for(let prop of dummyDivs){
+  console.log(prop.style);
+  prop.style.fontSize="100px";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
